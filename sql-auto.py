@@ -1,7 +1,8 @@
 #!/usr/bin/python
 
 import subprocess
-from colorama import Fore
+from colorama import Fore, init
+init()
 import time
 print(Fore.RED)
 banner = """
