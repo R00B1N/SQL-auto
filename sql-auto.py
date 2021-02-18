@@ -31,7 +31,7 @@ options = int(input("Choose an option: "))
 if options==1:
     URL = str(input("Type your URL website to scan: "))
     import subprocess
-    subprocess.call(f'sqlmap -u {URL} --dbs')
+    subprocess.call(f'sqlmap -u {URL} --dbs', shell = True)
 
 elif options==2:
     URL = str(input("Type your URL here: "))
@@ -39,17 +39,17 @@ elif options==2:
     time.sleep(3)
     proxy = str(input("type your proxy here (ex: http or https//:127.0.0.1:8080): "))
     import subprocess
-    subprocess.call(f'sqlmap -u {URL} --dbs --proxy{proxy} --all --hostname')
+    subprocess.call(f'sqlmap -u {URL} --dbs --proxy{proxy} --all --hostname', shell = True)
 
 elif options==3:
     URL = str(input("Type your url here: "))
     import subprocess
-    subprocess.call(f'sqlmap -u {URL} --users')
+    subprocess.call(f'sqlmap -u {URL} --users', shell = True)
 
 elif options==4:
     URL = str(input("Type your url here: "))
     import subprocess
-    subprocess.call(f'sqlmap -u {URL} --passwords')
+    subprocess.call(f'sqlmap -u {URL} --passwords', shell = True)
 
 elif options==5:
     print("!important do this after of scaning the web and databases to dump")
@@ -57,7 +57,7 @@ elif options==5:
     URL = str(input("Type here your recent URL: "))
     DB = str(input("Type here the name to select your Database: "))
     import subprocess
-    subprocess.call(f'sqlmap -u {URL} -random-agent -level 5 -D {DB} --tables')
+    subprocess.call(f'sqlmap -u {URL} -random-agent -level 5 -D {DB} --tables', shell = True)
 
 elif options==6:
     print("Now, you are going to install Hasher: tool that is used for cracking hashes...")
