@@ -1,0 +1,9 @@
+#!/bin/bash
+echo "Now you are going to install sql-auto"
+sleep 2s
+pkg install python2
+sleep 2s
+pip install colorama
+pip install sqlmap
+sleep 2s
+echo "All finished, happy hacking"
